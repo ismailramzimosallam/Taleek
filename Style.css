@@ -1,0 +1,238 @@
+/* =============
+ table of contents
+===============
+ 
+1. global styles
+2. navbar
+3. middle
+    
+4. wave
+ 
+*/
+
+
+/* 
+1. global style 
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+}
+
+.cover {
+    background-image: url(https://taleek.com/img/bg-layer.svg);
+    height: 1000px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: darkorchid;
+    background-attachment: fixed;
+    position: relative;
+}
+
+
+/* 
+2. header
+*/
+
+@media (prefers-color-scheme: dark) {
+    .cover {
+        background-color: black;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+}
+
+.logo,
+nav {
+    display: inline-block;
+    margin-top: 30px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    width: 40%;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: sans-serif;
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+p {
+    position: relative;
+    top: -38px;
+    left: 15px;
+    display: inline-block;
+    color: white;
+    font-size: 30px;
+}
+
+
+/* 
+3. middle
+*/
+
+.middle {
+    height: 630px;
+}
+
+h1 {
+    padding-top: 30px;
+    font-size: 90px;
+    text-align: center;
+    color: white;
+    animation: mymove 10s infinite linear;
+}
+
+@keyframes mymove {
+    0%,
+    100% {
+        letter-spacing: 5px;
+    }
+    50% {
+        letter-spacing: 15px;
+    }
+}
+
+.main-img {
+    display: block;
+    margin: auto;
+    animation: identifier 34s infinite;
+}
+
+@keyframes identifier {
+    0% {
+        transform: translate(40px, -40px);
+    }
+    50% {
+        transform: translate(10px, -10px);
+    }
+    100% {
+        transform: translate(40px, -40px);
+    }
+}
+
+.left {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 45%;
+    left: 10%;
+}
+
+.main-logo {
+    padding-top: 15px;
+    width: 190px;
+    height: 100px;
+    text-align: center;
+}
+
+button {
+    border: 1px solid goldenrod;
+    all: unset;
+    width: 140px;
+    height: 80px;
+    font-size: 30px;
+    padding: 10px 15px;
+    background-color: goldenrod;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 400px;
+}
+
+button:hover {
+    padding: 5px 10px;
+    font-size: 25px;
+}
+
+@media (max-width:1000px) {
+    .left {
+        position: static;
+        text-align: center;
+        width: 100%;
+        height: 200px;
+        display: inline-block;
+    }
+    button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* 
+4. wave
+*/
+
+.wave {
+    height: 143px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-image: url(../image/wave.png);
+    animation: waveani 350s infinite;
+}
+
+@keyframes waveani {
+    0% {
+        background-position: 10000px;
+    }
+    50% {
+        background-position: 500px;
+    }
+    100% {
+        background-position: 10000px;
+    }
+}
+
+.wave::before {
+    content: "";
+    background-image: url(./image/wave.png);
+    opacity: 0.5;
+    height: 143px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    animation: waveanirev 250s infinite;
+}
+
+@keyframes waveanirev {
+    0% {
+        background-position: -10000px;
+    }
+    50% {
+        background-position: -500px;
+    }
+    100% {
+        background-position: -10000px;
+    }
+}

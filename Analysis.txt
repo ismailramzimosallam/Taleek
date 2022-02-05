@@ -1,0 +1,7 @@
+background-repeat: ***;
+خاصية عدم تكرار الصورة 
+background-size:(كبر الصورة حسب الي بدي اياه )
+
+
+https://www.taleek.com/img/logo1.png
+https://www.taleek.com/img/logo2.png
